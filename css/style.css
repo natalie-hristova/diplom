@@ -47,7 +47,7 @@ area {
 .header {
   height: 95vh;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(20, 0, 0, 0.1), rgba(0, 0, 30, 0.3)), url(../../assets/img/bg.webp);
+  background-image: linear-gradient(to right, rgba(20, 0, 0, 0.1), rgba(0, 0, 30, 0.3)), url(../../assets/img/etar.jpg);
   background-size: contain;
   background-position: top;
   position: relative;
@@ -89,3 +89,6 @@ area {
   letter-spacing: 17;
   margin-bottom: 60px;
   animation: moveInRight 1s ease-out; }
+
+area {
+  border: 5px #f00 solid; }
