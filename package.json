@@ -1,0 +1,14 @@
+{
+  "name": "destifi",
+  "version": "1.0.0",
+  "description": "diplom",
+  "main": "index.js",
+  "scripts": {
+	"compile:scss": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Natali Hristova",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

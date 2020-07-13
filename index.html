@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+   <!--     <link rel="stylesheet" href="css/icon-font.css">-->
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+               
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/json/vidin.json"></script>
+
+        <title>Destifi | Намери своята следваща дестинация</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <img src="assets/img/logo.png" alt="logo" class="header__logo--img">
+            </div>
+            <div class="header__text-box">
+                <h1 class="header__primary">
+                    <span class="header__primary--main">
+                        Destifi
+                    </span>
+                    <span class="header__primary--sub">
+                        Welcome to best distination site :D
+                    </span>
+                </h1>
+                <a href="#map" class="btn btn-white">Discover our destinations</a>
+            </div>
+        </header>
+
+<section id="map">
+           <img src="assets/img/bg.jpg"  usemap="#bg-map" />
+
+        <map name="bg-map">
+             <area shape="rect" coords="11,11,150,120" alt="Vidin" class="js-modal-toggler Vidin" data-location='vidin'>
+            <area shape="rect" coords="150,120,333,250" alt="Phone" class="js-modal-toggler Sofia" data-location='sofia'>
+            <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm"> 
+        </map>
+
+    <div id="destinationModal" class="w3-modal closed">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-teal"> 
+                <span class="js-close-modal close">Close</span>
+            </header>
+              <h5 class="js-modal--content" id="demo"></h5>
+        </div>
+    </div>
+</section>
+
+<script>
+// Get the modal
+var modal = document.getElementById("destinationModal");
+
+$(function(){
+
+    $('.js-modal-toggler').on('click', function(e){        
+        if ($('#destinationModal').hasClass('closed')){
+                $('#destinationModal').removeClass('closed')
+                $('#destinationModal').addClass('open')
+        } else {
+            $('#destinationModal').removeClass('open')
+            $('#destinationModal').addClass('closed')
+        }
+
+$.getJSON("/json/"+$(this).data('location')+".json", function(data){
+            console.log(123);
+            var locations = data;
+            console.log(locations);
+            locations.forEach(myFunction);
+
+function myFunction(item) {
+  document.getElementById("demo").innerHTML += item.name + "<img src= assets/img/" + item.photo + " width=100 height=60>"+ "<br>"; 
+}
+           
+        })
+
+        $('.js-modal--location').text(
+        //  $(this).data('location');
+            )
+
+     //console.log($(this).data())
+    })
+
+    $('.js-close-modal').on('click', function(e){
+        $('#destinationModal').removeClass('open')
+        $('#destinationModal').addClass('closed')
+    })
+
+})
+
+
+
+</script>
+    </body>
+</html>
+
+
