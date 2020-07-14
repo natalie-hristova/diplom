@@ -4,7 +4,7 @@
   "description": "diplom",
   "main": "index.js",
   "scripts": {
-	"compile:scss": "node-sass sass/main.scss css/style.css -w"
+    "compile:scss": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Natali Hristova",
   "license": "ISC",

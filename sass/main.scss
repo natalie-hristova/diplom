@@ -1,11 +1,22 @@
+/*abstracts*/
+@import "abstract/variables";
+@import "abstract/mixins";
+@import "abstract/functions";
+
+/* base */
 @import "base/reset";
 @import "base/animations"; 
 
 /*components*/
-@import "components/bgmap";
+@import "components/bgmap"; 
 @import "components/welcome";
+@import "components/most-visited";   
+@import "components/buttons";
+@import "components/stories";  
 
 /*layouts*/
 
+@import "layout/grid";  
+@import "layout/typo"; 
 @import "layout/footer";
-@import "layout/header";
+@import "layout/header"; 

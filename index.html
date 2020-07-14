@@ -16,6 +16,29 @@
         <title>Destifi | Намери своята следваща дестинация</title>
     </head>
     <body>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>Начало</a></li>
+                    <li class="navigation__item"><a href="#map" class="navigation__link"><span>02</span>Избери дестинация</a></li>
+                    <li class="navigation__item"><a href="#most-visited" class="navigation__link"><span>03</span>Най-популярни</a></li>
+                    <li class="navigation__item"><a href="#stories" class="navigation__link"><span>04</span>Отзиви</a></li>
+                    <li class="navigation__item"><a href="#login" class="navigation__link"><span>05</span>Вход за потребители</a></li>
+                    </ul>
+            </nav>
+        </div>
+
+        <!-- Head component -->
         <header class="header">
             <div class="header__logo">
                 <img src="assets/img/logo.png" alt="logo" class="header__logo--img">
@@ -24,79 +47,173 @@
                 <h1 class="header__primary">
                     <span class="header__primary--main">
                         Destifi
-                    </span>
-                     <a href="sass/pages/header.html">LOGIN PART</a>
-                    <span class="header__primary--sub">
-                        Welcome to best distination site :D
+                    </span>                
+                        Добре дошли в най-невероятния сайт за избор на Вашата следваща дестинация
                     </span>
                 </h1>
-                <a href="#map" class="btn btn-white">Discover our destinations</a>
+                <a href="#map" class="btn btn--white btn--animated">Избери своята дестинация сега</a>
             </div>
         </header>
 
-<section id="map">
-           <img src="assets/img/bg.jpg"  usemap="#bg-map" />
+        <!-- MAP component -->
+        <section id="map" class="section-map">
+                <img class="map-img" src="assets/img/bg.jpg"  usemap="#bg-map" />
 
-        <map name="bg-map">
-            <area shape="rect" coords="11,11,150,120" alt="Vidin" class="js-modal-toggler Vidin" data-location='vidin'>
-            <area shape="rect" coords="150,120,333,250" alt="Phone" class="js-modal-toggler Sofia" data-location='sofia'>
-            <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm"> 
-        </map>
+                <map name="bg-map">
+                    <area shape="rect" coords="11,11,150,120" alt="Vidin" class="js-modal-toggler Vidin" data-location='vidin'>
+                    <area shape="rect" coords="150,120,333,250" alt="Phone" class="js-modal-toggler Sofia" data-location='sofia'>
+                    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm"> 
+                </map>
 
-    <div id="destinationModal" class="w3-modal closed">
-        <div class="w3-modal-content w3-card-4">
-            <header class="w3-container w3-teal"> 
-                <span class="js-close-modal close">Close</span>
-            </header>
-              <h5 class="js-modal--content" id="demo"></h5>
-        </div>
-    </div>
-</section>
+            <div id="destinationModal" class="w3-modal closed">
+                <div class="w3-modal-content w3-card-4">
+                    <header class="w3-container w3-teal"> 
+                        <span class="js-close-modal close">Close</span>
+                    </header>
+                    <h5 class="js-modal--content" id="demo"></h5>
+                </div>
+            </div>
+        </section>
+
+        <!-- Most visited places -->
+        <section class="section-most-visited" id="most-visited">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Най-популярните обекти
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Варна</h3>
+                    <p class="paragraph">
+                        Ва̀рна е най-големият град в Североизточна България, разположен по бреговете на Черно море и Варненското езеро и е административен център на едноименните община и област. Той е най-големият град в Северна България и по българското Черноморие. Населението на града по сведения на НСИ към 31 декември 2019 г
+                    </p>
+
+                    <h3 class="heading-tertiary u-margin-bottom-small">Етъра</h3>
+                    <p class="paragraph">
+                        Етнографски музей на открито „Етър“, или Етъра, е музей на открито в едноименния квартал на Габрово.
+
+Представлява възстановка на българския бит, култура и занаятчийство. Той е първият по рода си музей в България. Открит е на 7 септември 1964 г. Музеят е разположен на 8 км южно от основната част на Габрово.
+                    </p>
+
+                    <a href="#" class="btn-text">Още &rarr;</a>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+
+                        <img 
+                             alt="Photo 1"
+                             class="composition__photo composition__photo--p1"
+                             src="assets/img/most-1.jpg">
+
+                        <img 
+                             alt="Photo 2"
+                             class="composition__photo composition__photo--p2"
+                             src="assets/img/most-2.jpg">
+
+                        <img 
+                             alt="Photo 3"
+                             class="composition__photo composition__photo--p3"
+                             src="assets/img/most-3.jpg">
+
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stories component -->
+        <section class="section-stories" id="stories">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="assets/img/video.mp4" type="video/mp4">
+                    <source src="assets/img/video.webm" type="video/webm">
+                    Браузърът Ви не се поддържа
+                </video>
+            </div>
+
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Наистина щастливи хора :)
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="assets/img/stori-1.jpg" alt="Person on a tour" class="story__img">
+                        <figcaption class="story__caption">Марчело Маскарпоне</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Най-добрата гледка</h3>
+                        <p>
+                            След като се качихме на връх кот... Дъхът ми спря за миг. Мисля че не съм бил на по добро място никога преди
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="assets/img/stori-2.jpg" alt="Person on a tour" class="story__img">
+                        <figcaption class="story__caption">Мяу Пухански</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Уааау! Житовът ми е вече различен!</h3>
+                        <p>
+                            Откакто посетих Варна, вече не мога да гледам на чайките по същия начин. Те ровят в кофите и са по нагли от домашните котки.
+                            Мисля, че видях как чайка яде котка. Манйдблоуинг
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="u-center-text u-margin-top-huge">
+                <a href="#" class="btn-text">Още &rarr;</a>
+            </div>
+        </section>
 
 
-<span>test</span>
 
-<script>
-// Get the modal
-var modal = document.getElementById("destinationModal");
+        <!-- Footer component -->
 
-$(function(){
+        <footer class="footer">
+            <div class="footer__logo-box">
 
-    $('.js-modal-toggler').on('click', function(e){        
-        if ($('#destinationModal').hasClass('closed')){
-                $('#destinationModal').removeClass('closed')
-                $('#destinationModal').addClass('open')
-        } else {
-            $('#destinationModal').removeClass('open')
-            $('#destinationModal').addClass('closed')
-        }
-
-$.getJSON("/json/"+$(this).data('location')+".json", function(data){
-    document.getElementById("demo").innerHTML="";
-            var locations = data;
-            locations.forEach(myFunction);
-
-function myFunction(item) {
-  document.getElementById("demo").innerHTML += item.name + "<img src= assets/img/" + item.photo + " width=100 height=60>"+ "<br>"; 
-}
-           
-        })
-
-        $('.js-modal--location').text(
-        //  $(this).data('location');
-            )
-    })
-
-    $('.js-close-modal').on('click', function(e){
-        $('#destinationModal').removeClass('open')
-        $('#destinationModal').addClass('closed')
-    })
-
-})
+                <picture class="footer__logo">                    
+                    <img alt="Full logo" src="assets/img/logo.png">
+                </picture>
 
 
 
-</script>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Начало</a></li>
+                            <li class="footer__item"><a href="#map" class="footer__link">Избери Локация</a></li>
+                            <li class="footer__item"><a href="#most-visited" class="footer__link">Най-посещавани</a></li>
+                            <li class="footer__item"><a href="#stories" class="footer__link">Отзиви</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Вход за потребители</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Дипломна работа на <a href="#" class="footer__link">Натали Христова</a> с факултетен # <a href="#" class="footer__link">1717171717</a>.
+                        Научен ръководител госпожа др доц Ташева. и друго инфо което искат идва тук.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/places-modal.js"></script> 
+        <script src="js/login.js"></script>
+        <script src="js/footer.js"></script>
+
     </body>
 </html>
 
