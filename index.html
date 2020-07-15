@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
    <!--     <link rel="stylesheet" href="css/icon-font.css">-->
-         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
                
@@ -197,7 +197,7 @@
                             <li class="footer__item"><a href="#map" class="footer__link">Избери Локация</a></li>
                             <li class="footer__item"><a href="#most-visited" class="footer__link">Най-посещавани</a></li>
                             <li class="footer__item"><a href="#stories" class="footer__link">Отзиви</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Вход за потребители</a></li>
+                            <li class="footer__item"><a href="#login" class="footer__link">Вход за потребители</a></li>
                         </ul>
                     </div>
                 </div>
@@ -209,6 +209,32 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- LOGIN -->
+        <div class="popup" id="login">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="assets/img/login.jpg" alt="login photo" class="popup__img">
+                  
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Вход за потребители</h2>
+                    <form action="#" method="post" class="form">                     
+                      
+                        <div class="login__form--container">                         
+                          <input class="form__input" type="text" placeholder="Потребителско име" name="uname" required>    
+                          <input class="form__input" type="password" placeholder="Парола" name="psw" required>
+                          <button type="submit" class="btn btn--green ">Вход</button>    
+                        </div>
+                      
+                      
+                      </form>
+                    
+                </div>
+            </div>
+        </div>
 
         <script src="js/places-modal.js"></script> 
         <script src="js/login.js"></script>
