@@ -487,12 +487,10 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  display: inline-block;
   background-image: linear-gradient(to right, #999, #333);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
+  letter-spacing: .2rem; }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
@@ -500,7 +498,7 @@ body {
     .heading-secondary {
       font-size: 2.5rem; } }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -573,19 +571,19 @@ body {
     background-color: #333;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block;
+  
     transition: all .2s; }
   .footer__link:hover, .footer__link:active {
     color: #777;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-    transform: rotate(5deg) scale(1.3); }
+    }
   .footer__copyright {
     border-top: 1px solid #777;
     padding-top: 2rem;
     width: 80%;
     float: right; }
     @media only screen and (max-width: 56.25em) {
-      .footer__copyright {
+      .lcopyright {
         width: 100%;
         float: none; } }
 
