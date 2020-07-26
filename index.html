@@ -5,12 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
-   <!--     <link rel="stylesheet" href="css/icon-font.css">-->
-        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
-               
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <title>Destifi | Намери своята следваща дестинация</title>
@@ -60,19 +57,103 @@
                 <img class="map-img" src="assets/img/bg.jpg"  usemap="#bg-map" />
 
                 <map name="bg-map">
-                    <area shape="rect" coords="11,11,150,120" alt="Vidin" class="js-modal-toggler Vidin" data-location='vidin'>
-                    <area shape="rect" coords="150,120,333,250" alt="Phone" class="js-modal-toggler Sofia" data-location='sofia'>
-                    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm"> 
+                    <area shape="rect" coords="11,11,150,120" alt="Vidin" class="" href="#mapVidin">
+                    <area shape="rect" coords="150,120,333,250" alt="Varna" class="" href="#mapVarna">
+                    <area shape="rect" coords="150,120,333,250" alt="Plovdiv" class="" href="#mapPlovdiv">
+                    <area shape="rect" coords="150,120,333,250" alt="Sofia" class="" href="#mapSofia">
+                    
                 </map>
 
-            <div id="destinationModal" class="w3-modal closed">
-                <div class="w3-modal-content w3-card-4">
-                    <header class="w3-container w3-teal"> 
-                        <span class="js-close-modal close">Close</span>
-                    </header>
-                    <h5 class="js-modal--content" id="demo"></h5>
+
+
+
+
+
+        <div class="popup map__destination--popup" id="mapVidin">
+            <div class="popup__content">
+                
+                <div class="popup__right">
+                    <a href="#exit-popup" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Дестинации около Видин</h2>
+
+                    <div class="row destination__container">
+                        <div class="destination__picture--container">
+                            <img src="assets/img/destinations/babavida.jpeg" alt="login photo" class="popup__img">
+                        </div>
+                        <div class="destination__content--container">
+                            <h3>Крепост "Баба Вида"</h3>
+                            <p>„Баба Вида“, наричана и „Бабини Видини кули“, е средновековна крепост във Видин. Считана е за единствената изцяло запазена крепост в България. Служи за замък на местния владетел през Средновековието.
+
+                            Имената, с които е известна крепостта днес, произхождат от легенда за сестрите Вида, Кула и Гъмза, наследили местен владетел. Вида, най-голямата, изгражда замъка, който е наречен на нея „Бабини Видини кули“ и съкратено „Баба Вида“.</p>
+                        </div>
+                        <div class="destination__info--container">
+                            <h2>Рейтинг</h2>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> 
+
+                        </div>
+                        
+                    </div>
+
+
+
+                     <div class="row destination__container">
+                        <div class="destination__picture--container">
+                            <img src="assets/img/destinations/babavida.jpeg" alt="login photo" class="popup__img">
+                        </div>
+                        <div class="destination__content--container">
+                            <h3>Крепост "Баба Вида"</h3>
+                            <p>„Баба Вида“, наричана и „Бабини Видини кули“, е средновековна крепост във Видин. Считана е за единствената изцяло запазена крепост в България. Служи за замък на местния владетел през Средновековието.
+
+                            Имената, с които е известна крепостта днес, произхождат от легенда за сестрите Вида, Кула и Гъмза, наследили местен владетел. Вида, най-голямата, изгражда замъка, който е наречен на нея „Бабини Видини кули“ и съкратено „Баба Вида“.</p>
+                        </div>
+                        <div class="destination__info--container">
+                            <h2>Рейтинг</h2>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> 
+
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+                     <div class="row destination__container">
+                        <div class="destination__picture--container">
+                            <img src="assets/img/destinations/babavida.jpeg" alt="login photo" class="popup__img">
+                        </div>
+                        <div class="destination__content--container">
+                            <h3>Крепост "Баба Вида"</h3>
+                            <p>„Баба Вида“, наричана и „Бабини Видини кули“, е средновековна крепост във Видин. Считана е за единствената изцяло запазена крепост в България. Служи за замък на местния владетел през Средновековието.
+
+                            Имената, с които е известна крепостта днес, произхождат от легенда за сестрите Вида, Кула и Гъмза, наследили местен владетел. Вида, най-голямата, изгражда замъка, който е наречен на нея „Бабини Видини кули“ и съкратено „Баба Вида“.</p>
+                        </div>
+                        <div class="destination__info--container">
+                            <h2>Рейтинг</h2>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> 
+
+                        </div>
+                        
+                    </div>
+                   
+                    
                 </div>
             </div>
+        </div>
+
+        
         </section>
 
         <!-- Most visited places -->
@@ -179,19 +260,15 @@
 
         <!-- Footer component -->
 
-        <footer class="footer">
-            <div class="footer__logo-box">
+        <footer class="footer" id="footer">
 
-                <picture class="footer__logo">                    
-                    <img alt="Full logo" src="assets/img/logo.png">
-                </picture>
-
-
-
-            </div>
             <div class="row">
-                <div class="col-1-of-2">
-                    <div class="footer__navigation">
+                 <div class="col-1-of-2">
+                        <img alt="Full logo" src="assets/img/logo.png">
+                </div>
+
+                 <div class="col-1-of-2">
+                     <div class="footer__navigation">
                         <ul class="footer__list">
                             <li class="footer__item"><a href="#" class="footer__link">Начало</a></li>
                             <li class="footer__item"><a href="#map" class="footer__link">Избери Локация</a></li>
@@ -200,28 +277,28 @@
                             <li class="footer__item"><a href="#login" class="footer__link">Вход за потребители</a></li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-1-of-2">
-                    <p class="footer__copyright">
-                        Дипломна работа на <a href="#" class="Fter__link">Натали Христова</a> с факултетен № <a href="#" class="footer__link">661317017</a>.
-                        Научен ръководител гл.ас. доц д-р. А. Ташева. Консултант .... С.Ангелова
+
+                     <p class="footer__info">
+                        Дипломна работа на <strong>Натали Христова</strong> с факултетен № <strong>661317017</strong>.
+                        Научен ръководител <strong>гл.ас. доц д-р. А. Ташева</strong>. Консултант .... С.Ангелова
                     </p>
-                </div>
+                 </div>
             </div>
+                        
         </footer>
 
 
         <!-- LOGIN -->
-        <div class="popup" id="login">
+        <div class="popup login-popup" id="login">
             <div class="popup__content">
                 <div class="popup__left">
                     <img src="assets/img/login.jpg" alt="login photo" class="popup__img">
                   
                 </div>
                 <div class="popup__right">
-                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <a href="#exit-popup" class="popup__close">&times;</a>
                     <h2 class="heading-secondary u-margin-bottom-small">Вход за потребители</h2>
-                    <form action="#" method="post" class="form">                     
+                    <form action="" method="post" class="form login__form">                     
                       
                         <div class="login__form--container">                         
                           <input class="form__input" type="text" placeholder="Потребителско име" name="uname" required>    

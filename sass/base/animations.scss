@@ -45,20 +45,19 @@
 
 
 .footer, .navigation__background {
-    animation: colorchange 3s infinite; 
-    -webkit-animation: colorchange 3s infinite alternate; /* Chrome and Safari */
+    animation: colorchange 11s infinite; 
+    -webkit-animation: colorchange 11s infinite alternate; /* Chrome and Safari */
   }
 
   @keyframes colorchange {
-    0%   {background: #a2c8e8;}
-    33%  {background: #a893c2;}
-    66%  {background: #add19d; }
-    100% {background: #ebe6a2; }
+    0%   {background: $logo-tone-green;}
+    50%  {background: $logo-tone-blue;}
+    100%  {background: $logo-tone-yellow; }
+  
  }
 
   @-webkit-keyframes colorchange   {
-    0%   {background: #a2c8e8;}
-    33%  {background: #a893c2;}
-    66%  {background: #add19d; }
-    100% {background: #ebe6a2; }
+     0%   {background: $logo-tone-green;}
+    50%  {background: $logo-tone-blue;}
+    100%  {background: $logo-tone-yellow; }
  }
