@@ -125,9 +125,11 @@ html {
 .destination__container .destination__content--container {
   float: left;
   width: 60%; }
-  .destination__container .destination__content--container h3 {
+  .destination__container .destination__content--container h3, .destination__container .destination__content--container h3 > a {
     font-size: 2.2rem;
-    letter-spacing: 0.3rem; }
+    letter-spacing: 0.3rem;
+    color: #777777;
+    text-decoration: none; }
   .destination__container .destination__content--container p {
     display: inline-block;
     font-size: 1.2rem;
@@ -359,6 +361,10 @@ html {
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
+  @media only screen and (max-width: 37.5em) {
+    .popup.map__destination--popup {
+      position: absolute;
+      margin-top: 13.5rem; } }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .popup {
       -webkit-backdrop-filter: blur(10px);
@@ -378,6 +384,9 @@ html {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__content {
+        width: 100%; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
@@ -467,6 +476,26 @@ html {
 
 .form .btn {
   margin-top: 30px; }
+
+.comments__container {
+  padding: 4rem; }
+
+.destination__container {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+  .destination__container .col-1-of-2 {
+    position: relative; }
+  .destination__container .destination__image {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    max-width: 100%;
+    margin: 0px auto;
+    display: block; }
+  .destination__container .destination__blog--text {
+    font-size: 1.6rem;
+    margin-top: 3rem; }
+
+.header.header__destination.header__destination--babavida {
+  background-image: linear-gradient(to right, #140000, rgba(0, 0, 30, 0.3)), url(../../assets/img/babavida.jpg); }
 
 /*layouts*/
 .row {
@@ -601,12 +630,16 @@ body {
 
 .footer {
   background-color: #333333;
-  padding: 5rem 0;
+  padding: 12rem 0;
   font-size: 1.4rem;
   color: #f7f7f7; }
   @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer img {
+      display: block;
+      margin: 0px auto; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -695,7 +728,11 @@ body {
 
 .header__primary {
   color: #FFFFFF;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  font-size: 2.4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header__primary {
+      font-size: 1.6rem; } }
 
 .header__primary--main {
   display: block;
