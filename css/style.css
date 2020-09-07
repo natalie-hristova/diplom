@@ -538,6 +538,18 @@ html {
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
+.show-on-mobile {
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .show-on-mobile {
+      display: block; } }
+
+.show-on-desktop {
+  display: block; }
+  @media only screen and (max-width: 37.5em) {
+    .show-on-desktop {
+      display: none; } }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;

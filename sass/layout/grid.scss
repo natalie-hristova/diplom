@@ -60,3 +60,19 @@
     }
 
 }
+
+.show-on-mobile {
+    display: none;
+    
+    @include bp(phone) {
+        display: block;
+    }
+}
+
+.show-on-desktop {
+    display: block;
+
+    @include bp(phone) {
+        display: none;
+    }
+}
