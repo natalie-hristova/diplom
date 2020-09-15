@@ -1,0 +1,23 @@
+{
+  "name": "destifi",
+  "version": "1.0.0",
+  "description": "diplom",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "runAPI": "node index.js",
+    "start": "npm-run-all --parallel devserver compile:scss runAPI"
+  },
+  "author": "Natali Hristova",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.3",
+    "node-restful": "^0.2.6"
+  }
+}
