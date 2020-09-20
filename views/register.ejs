@@ -1,47 +1,66 @@
-<h1>Register</h1>
-<%- include('partials/messages.ejs') %>
+
+<%- include('header.ejs') %>
+
+<div class="popup login-popup" id="register">
+    <div class="popup__content">
+        <div class="popup__left">
+            <img src="/assets/img/login.jpg" alt="login photo" class="popup__img">
+          
+        </div>
+        <div class="popup__right">
+            <a href="/#exit-popup" class="popup__close">&times;</a>
+            <h2 class="heading-secondary u-margin-bottom-small">Регистрация</h2>
+            
+
+            <form action="/users/register" method="POST" class="form login__form">                                           
+                <div class="login__form--container">                         
+                  <input 
+                  class="form__input" 
+                  type="name"
+                  name="name"
+                  placeholder="Име"
+                  value="<%= typeof name != 'undefined' ? name : '' %>"
+                  />
+
+                  <input
+                    class="form__input" 
+                    type="email"
+                    name="email"
+                    placeholder="e-mail"
+                    value="<%= typeof email != 'undefined' ? email : '' %>"
+                  />
 
 
-<form action="/users/register" method="POST">
-<div>
-    <label for="name">Name</label>
-    <input
-      type="name"
-      name="name"
-      placeholder="Enter Name"
-      value="<%= typeof name != 'undefined' ? name : '' %>"
-    />
-  
+                <input
+                  class="form__input"
+                  type="password"
+                  name="password"
+                  placeholder="парола"
+                  value="<%= typeof password != 'undefined' ? password : '' %>"
+                />
+
+                <input
+                  class="form__input"
+                  type="password"
+                  name="password2"
+                  placeholder="потвърдете паролата"
+                  value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                />
+    
+                  
+                  <button type="submit" class="btn btn--green ">Регистрация</button>    
+                </div>
+              
+              <p >Имате акаунт? <a href="/users/login" class="login__form--service-link">Влезте в профила си</a></p>
+             
+              
+            </form>
+
+            <%- include('partials/messages.ejs') %>
+
+           
+        </div>
+    </div>
 </div>
-<div>
-    <label for="email">Email</label>
-    <input
-      type="email"
-      name="email"
-      placeholder="Enter Email"
-      value="<%= typeof email != 'undefined' ? email : '' %>"
-    />
-  </div>
-  <div >
-    <label for="password">Password</label>
-    <input
-      type="password"
-      name="password"
-      placeholder="Create Password"
-      value="<%= typeof password != 'undefined' ? password : '' %>"
-    />
-  </div>
-  <div >
-    <label for="password2">Confirm Password</label>
-    <input
-      type="password"
-      name="password2"
-      placeholder="Confirm Password"
-      value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
-    />
-  </div>
-  <button type="submit" class="btn btn-primary btn-block">
-    Register
-  </button>
-</form>
-<p >Have An Account? <a href="/users/login">Login</a></p>
+
+<%- include('footer.ejs') %>

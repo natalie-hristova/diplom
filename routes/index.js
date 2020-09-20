@@ -4,7 +4,9 @@ const {ensureAuthenticated} = require('../config/auth')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { 
+    title: 'nati' 
+  });
 });
 
 router.get('/register', (req,res)=>{
@@ -18,7 +20,7 @@ router.get('/dashboard',ensureAuthenticated,(req,res)=>{
 })
 
 router.get('/blog', function(req, res, next) {
-  res.render('blog', { title: 'Express' });
+  res.render('blog', { title: 'nati' });
 });
 
 
@@ -28,6 +30,14 @@ router.get('/babavida', function(req, res, next) {
   		title: 'babavida' 
   	}
   	);
+});
+
+router.get('/login', function(req, res, next) {
+  res.render('login', 
+    { 
+      title: 'babavida' 
+    }
+    );
 });
 
 

@@ -181,3 +181,14 @@
     }
 
 }
+
+
+.login__form--service-link {
+    font-size: 2rem;
+    color: $logo-tone-purple;
+    text-decoration: none;
+
+    &:hover {
+        color: $logo-tone-blue;
+    }
+}

@@ -4,9 +4,7 @@ const User = require("../models/user");
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 //login handle
-router.get('/login',(req,res)=>{
-    res.render('login');
-})
+
 router.get('/register',(req,res)=>{
     res.render('register')
     })
@@ -24,16 +22,16 @@ passport.authenticate('local',{
     let errors = [];
     console.log(' Name ' + name+ ' email :' + email+ ' pass:' + password);
     if(!name || !email || !password || !password2) {
-        errors.push({msg : "Please fill in all fields"})
+        errors.push({msg : "Моля попълнете всички полета"})
     }
     //check if match
     if(password !== password2) {
-        errors.push({msg : "passwords dont match"});
+        errors.push({msg : "паролата не съвпада"});
     }
     
     //check if password is more than 6 characters
     if(password.length < 6 ) {
-        errors.push({msg : 'password atleast 6 characters'})
+        errors.push({msg : 'паролата трябва да е поне 6 символа'})
     }
     if(errors.length > 0 ) {
     res.render('register', {
@@ -67,7 +65,7 @@ passport.authenticate('local',{
                     newUser.save()
                     .then((value)=>{
                         console.log(value)
-                        req.flash('success_msg','You have now registered!');
+                        req.flash('success_msg','Регистрацията е успещна!');
                         res.redirect('/users/login');
                     })
                     .catch(value=> console.log(value));

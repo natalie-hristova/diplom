@@ -6,17 +6,17 @@
 
             <div class="row">
                  <div class="col-1-of-2">
-                        <img alt="Full logo" src="assets/img/logo.png">
+                        <img alt="Full logo" src="/assets/img/logo.png">
                 </div>
 
                  <div class="col-1-of-2">
                      <div class="footer__navigation">
                         <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Начало</a></li>
-                            <li class="footer__item"><a href="#map" class="footer__link">Избери Локация</a></li>
-                            <li class="footer__item"><a href="#most-visited" class="footer__link">Най-посещавани</a></li>
-                            <li class="footer__item"><a href="#stories" class="footer__link">Отзиви</a></li>
-                            <li class="footer__item"><a href="#login" class="footer__link">Вход за потребители</a></li>
+                            <li class="footer__item"><a href="/#" class="footer__link">Начало</a></li>
+                            <li class="footer__item"><a href="/#map" class="footer__link">Избери Локация</a></li>
+                            <li class="footer__item"><a href="/#most-visited" class="footer__link">Най-посещавани</a></li>
+                            <li class="footer__item"><a href="/#stories" class="footer__link">Отзиви</a></li>
+                            <li class="footer__item"><a href="/users/login#login" class="footer__link">Вход за потребители</a></li>
                         </ul>
                     </div>
 
@@ -29,30 +29,7 @@
                         
         </footer>
 
-        <!-- LOGIN -->
-        <div class="popup login-popup" id="login">
-            <div class="popup__content">
-                <div class="popup__left">
-                    <img src="assets/img/login.jpg" alt="login photo" class="popup__img">
-                  
-                </div>
-                <div class="popup__right">
-                    <a href="#exit-popup" class="popup__close">&times;</a>
-                    <h2 class="heading-secondary u-margin-bottom-small">Вход за потребители</h2>
-                    <form action="auth" method="POST" class="form login__form">                     
-                      
-                        <div class="login__form--container">                         
-                          <input class="form__input" type="text" placeholder="Потребителско име" name="uname" required>    
-                          <input class="form__input" type="password" placeholder="Парола" name="psw" required>
-                          <button type="submit" class="btn btn--green ">Вход</button>    
-                        </div>
-                      
-                      
-                    </form>
-                    
-                </div>
-            </div>
-        </div>
+    
 
         <script src="js/places-modal.js"></script> 
         <script src="js/login.js"></script>
