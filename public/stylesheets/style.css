@@ -477,12 +477,18 @@ html {
 .form .btn {
   margin-top: 30px; }
 
-.login__form--service-link {
+.login__form--service-link,
+.welcome__logout {
   font-size: 2rem;
   color: #a893c2;
   text-decoration: none; }
-  .login__form--service-link:hover {
+  .login__form--service-link:hover,
+  .welcome__logout:hover {
     color: #a2c8e9; }
+
+.welcome__username {
+  font-size: 3rem;
+  text-decoration: none; }
 
 .comments__container {
   padding: 4rem; }
@@ -503,6 +509,17 @@ html {
 
 .header.header__destination.header__destination--babavida {
   background-image: linear-gradient(to right, #140000, rgba(0, 0, 30, 0.3)), url(../../assets/img/babavida.jpg); }
+
+.desginaton__title {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #999999, #333333);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem; }
 
 /*layouts*/
 .row {

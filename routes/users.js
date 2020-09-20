@@ -4,6 +4,9 @@ const User = require("../models/user");
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 //login handle
+router.get('/login',(req,res)=>{
+    res.render('login')
+    })
 
 router.get('/register',(req,res)=>{
     res.render('register')
@@ -11,8 +14,8 @@ router.get('/register',(req,res)=>{
 //Register handle
 router.post('/login',(req,res,next)=>{
 passport.authenticate('local',{
-    successRedirect : '/dashboard',
-    failureRedirect: '/users/login',
+    successRedirect : '/dashboard#dashboard',
+    failureRedirect: '/users/login#login',
     failureFlash : true
 })(req,res,next)
 })
@@ -45,7 +48,7 @@ passport.authenticate('local',{
        User.findOne({email : email}).exec((err,user)=>{
         console.log(user);   
         if(user) {
-            errors.push({msg: 'email already registered'});
+            errors.push({msg: 'email-ът е вече регистриран'});
             res.render('register',{errors,name,email,password,password2})  
            } else {
             const newUser = new User({
@@ -65,8 +68,8 @@ passport.authenticate('local',{
                     newUser.save()
                     .then((value)=>{
                         console.log(value)
-                        req.flash('success_msg','Регистрацията е успещна!');
-                        res.redirect('/users/login');
+                        req.flash('success_msg','Регистрацията е успешна!');
+                        res.redirect('/users/login#login');
                     })
                     .catch(value=> console.log(value));
                       
@@ -78,7 +81,7 @@ passport.authenticate('local',{
 //logout
 router.get('/logout',(req,res)=>{
 req.logout();
-req.flash('success_msg','Now logged out');
-res.redirect('/users/login'); 
+req.flash('success_msg','е вече отписън');
+res.redirect('/users/login#login'); 
 })
 module.exports  = router;

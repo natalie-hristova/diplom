@@ -1,3 +1,24 @@
-<h1>Dashboard</h1>
-<p> Welcome <%= user.name %></p>
-<a href="/users/logout">Logout</a>
+<%- include('header.ejs') %>
+
+<div class="popup login-popup" id="dashboard">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="/assets/img/login.jpg" alt="login photo" class="popup__img">
+                  
+                </div>
+                <div class="popup__right">
+                    <a href="/#exit-popup" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Добре дошли</h2>
+                    <p class="welcome__username"> Добре довли <%= user.name %></p>
+					<a class="welcome__logout" href="/users/logout">Изход</a>
+                    <%- include('partials/messages.ejs') %>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+<%- include('footer.ejs') %>

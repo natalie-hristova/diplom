@@ -183,7 +183,8 @@
 }
 
 
-.login__form--service-link {
+.login__form--service-link,
+.welcome__logout {
     font-size: 2rem;
     color: $logo-tone-purple;
     text-decoration: none;
@@ -192,3 +193,9 @@
         color: $logo-tone-blue;
     }
 }
+
+.welcome__username {
+ font-size: 3rem;
+ text-decoration: none;
+}
+

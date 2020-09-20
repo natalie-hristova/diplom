@@ -1,6 +1,8 @@
+
 <% if(typeof errors!= 'undefined') { %>
 <%    errors.forEach(function(error){ %>
-        <p> <%= error.msg %></p>
+	<hr>
+    <p> <%= error.msg %></p>
 <%    })        %>
 <% } %>
 
@@ -9,8 +11,10 @@
       <% } %>
 
 <% if(error_msg != '') { %>
+	<hr>
       <p><%= error_msg %></p> 
       <% } %> 
 <% if(error != '') { %>
+	<hr>
        <p><%= error %> </p>
       <% } %> 
