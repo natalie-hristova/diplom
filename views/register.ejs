@@ -5,17 +5,17 @@
     <div class="popup__content">
         <div class="popup__left">
             <img src="/assets/img/login.jpg" alt="login photo" class="popup__img">
-          
+
         </div>
         <div class="popup__right">
             <a href="/#exit-popup" class="popup__close">&times;</a>
             <h2 class="heading-secondary u-margin-bottom-small">Регистрация</h2>
-            
 
-            <form action="/users/register" method="POST" class="form login__form">                                           
-                <div class="login__form--container">                         
-                  <input 
-                  class="form__input" 
+
+            <form action="/users/register" method="POST" class="form login__form">
+                <div class="login__form--container">
+                  <input
+                  class="form__input"
                   type="name"
                   name="name"
                   placeholder="Име"
@@ -23,7 +23,7 @@
                   />
 
                   <input
-                    class="form__input" 
+                    class="form__input"
                     type="email"
                     name="email"
                     placeholder="e-mail"
@@ -46,19 +46,20 @@
                   placeholder="потвърдете паролата"
                   value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
                 />
-    
-                  
-                  <button type="submit" class="btn btn--green ">Регистрация</button>    
+
+
+                  <button type="submit" class="btn btn--green ">Регистрация</button>                
+                  <a href="/login#login" class="btn btn--green form__link-button">Влезте в профила си</a>
                 </div>
-              
-              <p >Имате акаунт? <a href="/login#login" class="login__form--service-link">Влезте в профила си</a></p>
-             
-              
+
+
+
+
             </form>
 
             <%- include('partials/messages.ejs') %>
 
-           
+
         </div>
     </div>
 </div>

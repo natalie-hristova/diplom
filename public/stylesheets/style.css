@@ -451,7 +451,7 @@ html {
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 90%;
+  width: 100%;
   display: block;
   transition: all .3s;
   border-bottom: 1px solid #76808c; }
@@ -489,6 +489,11 @@ html {
 .welcome__username {
   font-size: 3rem;
   text-decoration: none; }
+
+.form__link-button {
+  margin-left: 1rem;
+  background-color: #a2c8e9 !important;
+  float: right; }
 
 .comments__container {
   padding: 4rem; }
@@ -774,10 +779,11 @@ body {
   display: block;
   font-size: 60px;
   font-weight: 400;
-  letter-spacing: 35;
+  letter-spacing: 20px;
   animation-name: moveInLeft;
   animation-duration: 2s;
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+  text-align: center; }
 
 .header__primary--sub {
   display: block;

@@ -4,24 +4,22 @@
             <div class="popup__content">
                 <div class="popup__left">
                     <img src="/assets/img/login.jpg" alt="login photo" width="400" >
-                  
+
                 </div>
                 <div class="popup__right">
                     <a href="/#exit-popup" class="popup__close">&times;</a>
                     <h2 class="heading-secondary u-margin-bottom-small">Вход за потребители</h2>
-                    <form action="/users/login" method="POST" class="form login__form">                                           
-                        <div class="login__form--container">                         
-                          <input class="form__input" type="text" placeholder="Потребителско име" name="email" required>    
+                    <form action="/users/login" method="POST" class="form login__form">
+                        <div class="login__form--container">
+                          <input class="form__input" type="text" placeholder="Потребителско име" name="email" required>
                           <input class="form__input" type="password" placeholder="Парола" name="password" required>
-                          <button type="submit" class="btn btn--green ">Вход</button>    
+                          <button type="submit" class="btn btn--green ">Вход</button>
+                          <a class="btn btn--green form__link-button" href="/register#register">Регистрация</a>
                         </div>
-                      
-                      <a class="login__form--service-link" href="/register#register">Регистрация</>
-                      
                     </form>
-                    
+
                     <%- include('partials/messages.ejs') %>
-                    
+
                 </div>
             </div>
         </div>
