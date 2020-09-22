@@ -422,7 +422,7 @@ html {
     visibility: visible; }
   .popup:target .popup__content {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1); }
+    transform: translate(-50%, -40%) scale(0.9); }
   .popup__close:link, .popup__close:visited {
     color: #777777;
     position: absolute;
